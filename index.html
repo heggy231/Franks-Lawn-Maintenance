@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Esha's restaurant</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" rel="stylesheet">
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  /* centers background img */
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323; /* dark gray*/
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  font-size: 75px;
+  text-align: center;
+  margin: 60px 0 0 0;
+  color: #aaaaaa; /* text color gray */
+}
+h2 {
+  text-align: center;
+  margin: 0 0 70px 0;
+  color: #bbbbbb; /* text color pale gray*/
+}
+div {
+  height: 200px;
+    /* keeps img from tiling */
+  background-size: 100%;
+  /* so paragraph can have pos: absolute. */
+  position: relative;
+  margin: 40px 0 0 0;
+  /* make div round edge */
+  border-radius: 12px;
+}
+.first {
+  background: url(https://s3-media2.fl.yelpcdn.com/photo/f-MN0w-X4VufBlcylADloA/o.jpg);
+}
+.second {
+  background: url(https://s3-media4.fl.yelpcdn.com/photo/b5q5sV--79E-x4Sf1ePmGg/o.jpg);
+}
+.dessert {
+  background: url(https://s3-media4.fl.yelpcdn.com/photo/Aln3QEkQp0XOyhiGgSzp-w/o.jpg);
+}
+p {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  color: rgba(255,255,255,1);
+  padding: 10px;
+  text-align: justify;
+  line-height: 28px;
+  /* position absolute needs to pair with parent div position relative to work!  This moves p to bottom */
+  position: absolute;
+  bottom: 0; /*positioning p to bottom */
+  margin: 0;
+  /* border-radius: 12px; */
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+.price {
+  float: right;
+}
+small {
+  opacity: 0; 
+}
+.show-description p {
+  height: 150px;
+}
+.show-description small {
+  opacity: 1;
+}
+@media (max-width: 500px) { /* screen less than 500px do this*/
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px; 
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+  <h1>Frank’s Lawn Maintenance</h1>
+  <h2>One stop shop for all your lawn care needs</h2>
+  <div class="first">
+    <p>Lawn Care Service<span class="price">$ Text me for Free estimate!</span><br />
+      <small>I cut your grass and take care of your garden.  I love taking care of your lawn! I will make it happen!</small>
+    </p>
+  </div>
+  <div class="second">
+    <p>Sprinklers repair<span class="price">$ Text me for Free estimate!</span><br />
+      <small>I install Sprinklers, repair valves.  Ask me for anything regards to sprinklers.  I will make it happen!</small>
+    </p>
+  </div>
+  <div class="dessert">
+    <p>Special projects<span class="price">$ Text me for Free estimate!</span><br />
+      <small>I love to trim your tall palm trees, any trees.  I can clean your gutters too!  Just ask me.  I will make it happen!</small>
+    </p>
+  </div>
+  <script>
+    $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+    });
+  </script>
+</body>
