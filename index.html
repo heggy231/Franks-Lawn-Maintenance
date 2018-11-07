@@ -79,9 +79,6 @@
   .show-description small {
     opacity: 1;
   }
-  footer {
-    color: rgba(255,255,255,1);
-  }
   @media (max-width: 500px) { /* screen less than 500px do this*/
     h1 {
       font-size: 50px;
@@ -102,39 +99,54 @@
     small {
       font-size: 16px;
     }
+    footer {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
+  footer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 60px 0 0 0;
+  }
+  footer, a {
+    color: rgba(255,255,255,1);
+  }
+
   </style>
 </head>
 
 <body>
-<main>
+
   <h1>Frank’s Lawn Maintenance</h1>
   <h2>One stop shop for all your lawn care needs</h2>
   <div class="first">
-    <p>Lawn Care Service<span class="price">$ Text (209) 535-4676 me for Free estimate!</span><br />
+    <p>Lawn Care Service<span class="price">$ Text (209) 535-4676 me for Free estimate!</span><br>
       <small>I cut your grass and take care of your garden.  I love taking care of your lawn! I will make it happen!</small>
     </p>
   </div>
   <div class="second">
-    <p>Sprinklers repair<span class="price">$ Text (209) 535-4676 me for Free estimate!</span><br />
+    <p>Sprinklers repair<span class="price">$ Text (209) 535-4676 me for Free estimate!</span><br>
       <small>I install Sprinklers, repair valves.  Ask me for anything regards to sprinklers.  I will make it happen!</small>
     </p>
   </div>
   <div class="dessert">
-    <p>Special projects<span class="price">$ Text (209) 535-4676 me for Free estimate!</span><br />
+    <p>Special projects<span class="price">$ Text (209) 535-4676 me for Free estimate!</span><br>
       <small>I love to trim your tall palm trees, any trees.  I can clean your gutters too!  Just ask me.  I will make it happen!</small>
     </p>
   </div>
+  <footer>
+    <p>Copyright &copy; 2018 | Frank’s Lawn Maintenance | <a href="mailto:FrankLocalgarden@gmail.com?Subject=Request%20Franks%20Lawn%20Maintenance%20Information">Email</a> | <a href="tel:+1209-535-4676">Text: 209-535-4676</a>
+    </p>
+  </footer>
   <script>
     $('div').on('click', function() {
       $(this).toggleClass('show-description');
     });
   </script>
-  <footer>
-    <hr><!-- horizontal rule inserts a line in the page -->
-    <p>Copyright &copy; 2018. Frank’s Lawn Maintenance</p>
-    <p><a href="mailto:FrankLocalgarden@gmail.com?Subject=Request%20Franks%20Lawn%20Maintenance%20Information">Email</a> | <a href="tel:+1209-535-4676">Call Frank at 209-535-4676</a></p>
-  </footer>
-</main>
+
+
+
 </body>
 </html>
