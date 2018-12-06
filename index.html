@@ -60,6 +60,8 @@
     /* position absolute needs to pair with parent div position relative to work!  This moves p to bottom */
     position: absolute;
     bottom: 0; /*positioning p to bottom */
+    left: 0;
+    right: 0;
     margin: 0;
     /* border-radius: 12px; */
     height: 30px;
@@ -122,17 +124,17 @@
   <h1>Frank’s Lawn Maintenance</h1>
   <h2>One stop shop for all your lawn care needs</h2>
   <div class="first">
-    <p>Lawn Care Service<span class="price">$ Text (209) 535-4676 me for Free estimate!</span><br>
+    <p>Lawn Care Service<span class="price">$ Text (209) 535-4676 for Free estimate!</span><br>
       <small>I cut your grass and take care of your garden.  I love taking care of your lawn! I will make it happen!</small>
     </p>
   </div>
   <div class="second">
-    <p>Sprinklers repair<span class="price">$ Text (209) 535-4676 me for Free estimate!</span><br>
+    <p>Sprinklers repair<span class="price">$ Text (209) 535-4676 for Free estimate!</span><br>
       <small>I install Sprinklers, repair valves.  Ask me for anything regards to sprinklers.  I will make it happen!</small>
     </p>
   </div>
   <div class="dessert">
-    <p>Special projects<span class="price">$ Text (209) 535-4676 me for Free estimate!</span><br>
+    <p>Special projects<span class="price">$ Text (209) 535-4676 for Free estimate!</span><br>
       <small>I love to trim your tall palm trees, any trees.  I can clean your gutters too!  Just ask me.  I will make it happen!</small>
     </p>
   </div>
@@ -145,8 +147,6 @@
       $(this).toggleClass('show-description');
     });
   </script>
-
-
 
 </body>
 </html>
